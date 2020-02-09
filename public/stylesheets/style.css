@@ -1,0 +1,19 @@
+.container{
+    width: 70%;
+    position: absolute;
+    top :40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.chat{
+    width: 600px;
+    height: 300px;
+    margin-bottom: 1rem;
+    
+}
+
+.roomtitle ,
+.chat {
+    background-color: #ddd;
+}
