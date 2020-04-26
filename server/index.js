@@ -1,4 +1,3 @@
-  
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
@@ -6,14 +5,14 @@ const cors = require('cors');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
-// const router = require('./router');
+const router = require('./router');
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(cors());
-// app.use(router);
+app.use(router);
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
@@ -49,10 +48,4 @@ io.on('connect', (socket) => {
   })
 });
 
-app.get("/", (req, res) => {
-  res.send({ response: "Server is up and running." }).status(200);
-});
-
-server.listen(process.env.PORT||5000,process.env.IP,()=>{
-  console.log("the server has started");
-});
+server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
