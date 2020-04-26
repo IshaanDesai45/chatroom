@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IshaanDesai45/chatroom.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "mime": "^2.4.4",
-    "socket.io": "^2.3.0"
-  }
+  "bugs": {
+    "url": "https://github.com/IshaanDesai45/chatroom/issues"
+  },
+  "homepage": "https://github.com/IshaanDesai45/chatroom#readme"
 }
