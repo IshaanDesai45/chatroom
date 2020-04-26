@@ -53,4 +53,6 @@ app.get("/", (req, res) => {
   res.send({ response: "Server is up and running." }).status(200);
 });
 
-server.listen(5000, () => console.log(`Server has started.`));
+server.listen(process.env.PORT,process.env.IP,()=>{
+  console.log("the server has started");
+});
